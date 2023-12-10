@@ -16,7 +16,7 @@ import 'signature_method.dart';
 class Client extends http.BaseClient {
   final SignatureMethod _signatureMethod;
   final ClientCredentials _clientCredentials;
-  final Credentials _credentials;
+  final Credentials? _credentials;
   final http.BaseClient _httpClient;
 
   /// A constructor of Client.
