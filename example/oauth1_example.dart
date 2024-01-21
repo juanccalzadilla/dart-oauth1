@@ -19,8 +19,11 @@ void main() {
       oauth1.ClientCredentials(apiKey, apiSecret);
 
   // create Authorization object with client credentials and platform definition
-  final oauth1.Authorization auth =
-      oauth1.Authorization(clientCredentials, platform);
+  final oauth1.Authorization auth = oauth1.Authorization(
+      clientCredentials, platform,
+      httpHeaders: <String, String>{
+        'Access-Control-Allow-Origin': '*'
+      });
 
   // request temporary credentials (request tokens)
   auth
